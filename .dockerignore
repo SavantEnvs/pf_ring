@@ -1,0 +1,6 @@
+# Bake the FULL repo (including .git history) into the commit image; drop only local build output.
+# NB: upstream tracks prebuilt *.a/*.so under userland/lib/libs, so no blanket artifact patterns here.
+mayhem/build-*/
+.DS_Store
+*.swp
+*~
