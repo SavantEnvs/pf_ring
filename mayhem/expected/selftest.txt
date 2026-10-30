@@ -1,0 +1,21 @@
+linktype=1 snaplen=65535
+pkt0 len=54 ts=1000
+pkt1 len=46 ts=1001
+pkt2 len=42 ts=1002
+packets=3 bytes=142
+filter[tcp port 80]=1
+filter[tcp port 8080]=0
+filter[udp]=1
+filter[udp and dst port 53]=1
+filter[ip]=2
+filter[arp]=1
+filter[ether broadcast]=2
+filter[ip src 10.0.0.3]=1
+filter[host 10.0.0.2]=2
+filter[len > 50]=1
+filter[less 45]=1
+filter[ip[9] = 17]=1
+filter[net 10.0.0.0/30 and not arp]=2
+filter[ether src 00:11:22:33:44:55]=3
+filter[tcp[tcpflags] & tcp-syn != 0]=1
+badfilter=-1
